@@ -1,0 +1,1213 @@
+@charset "utf-8";
+
+/*************** 公共样式 *************/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+ul,
+li,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+form,
+input {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
+    width: 100%;
+    height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+    /* IE < 8 */
+}
+
+
+.red {
+    color: #de394a;
+    font-style: normal;
+}
+
+.bg_red{
+    background-color: #de394a;
+}
+
+img {
+    border: 0px;
+}
+
+.tip_p {
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+.normal_p {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+/* 按钮 */
+.btn {
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #de394a;
+    border-radius: 3px;
+    padding: 10px 0;
+    color: #de394a;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #de394a;
+    color: #fff;
+}
+
+/* 左右浮动 */
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.app{
+    position: relative;
+    width: 100%;
+    min-width: 1300px;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 弹性盒子布局 */
+.flexBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 超出隐藏（不换行） */
+.overHidden{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* checkBox */
+.checkBox{
+    height: 30px;
+}
+
+.checkBox label{
+    width: 14px;
+    height: 14px;
+    border: 2px #D4D9DD solid;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 6px;
+    margin-right: 6px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkBox label:after{
+    content: '';
+    background-color: #7d8e91;
+    width: 12px;
+    height: 12px;
+    line-height: 10px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    border-radius: 2px;
+    text-align: center;
+    transform: translateY(-30px);
+    transition: transform .2s ease-out;
+}
+
+.checkBox [type="checkbox"]:checked+label:after{
+    transform: translateY(0);
+    transition: transform .2s ease-in;
+}
+
+.check_msg{
+    height: 18px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+
+
+/*************** 导航 *******************/
+.navBox {
+    width: 12%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 1px 1px 6px #888;
+}
+
+.head{
+    width: 100%;
+}
+
+.logo {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo_img{
+    width: 60%;
+}
+
+.nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.list {
+    box-sizing: border-box;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.list:hover {
+    border-bottom: 1px solid #de394a;
+    border-right: 4px solid #de394a;
+}
+
+.list a {
+    width: 100%;
+    display: inline-block;
+    line-height: 60px;
+}
+
+.languageCheck {
+    color: #de394a;
+}
+
+.action {
+    border-bottom: 1px solid #de394a;
+    border-right: 4px solid #de394a;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 160px;
+}
+
+/**************** 首页start ******************/
+.container {
+    width: 88%;
+    height: 100%;
+    float: right;
+}
+
+/* banner部分 */
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner .index_bg {
+    width: 100%;
+}
+
+.banner_content {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner_logo {
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+.banner_tip {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.banner_tip_content {
+    display: inline-block;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.377);
+    padding: 5px 40px;
+}
+
+.wechat_span {
+    width: 7%;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.wechat{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.banner_icon{
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    margin-left: -14px;
+}
+
+/* goTop模块 */
+.goTop{
+    width: 40px;
+    height: 160px;
+    position: fixed;
+    right: 80px;
+    bottom: 50px;
+}
+
+.iconBox{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    line-height: 40px;
+    background-color: rgba(73, 73, 73, 0.712);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.icon{
+    vertical-align: middle;
+}
+
+
+/* 登录模块 */
+.login_register{
+    width: 100px;
+    border:1px solid #bbb;
+    border-radius: 3px;
+    line-height: 30px;
+    color: #aaa;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+}
+.login{
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color: #bbb;
+    color: #de394a;
+}
+
+.register{
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.register:hover {
+    background-color: #bbb;
+    color: #de394a;
+}
+
+/* 产品优势 */
+.title {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.advantages {
+    width: 100%;
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding: 0 80px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.advantage{
+    width: 33%;
+    margin: 10px 0;
+}
+
+.advantage_content {
+    position: relative;
+}
+
+.advantage_img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.advantage_shadow {
+    position: absolute;
+    border-radius: 3px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.advantage_shadow:hover {
+    background-color: rgba(79, 89, 143, 0.6);
+}
+
+.advantage_top {
+    position: absolute;
+    width: 100%;
+    height: 28%;
+    left: 0;
+    top: -40%;
+}
+
+.advantage_tip{
+    height: 100%;
+}
+
+.advantage_shadow:hover .advantage_top {
+    top: 12%;
+    transition: 0.5s;
+}
+
+.advantage_center {
+    position: absolute;
+    /* opacity: 0; */
+    width: 100%;
+    left: 0;
+    top: 45%;
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* .advantage_shadow:hover .advantage_center {
+    opacity:1;
+    transition: 0.5s;
+} */
+
+.advantage_bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.advantage_shadow:hover .advantage_bottom {
+    top: 60%;
+    transition: 0.5s;
+}
+
+/* 实时动态 */
+.real_time_dynamic {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.dynamics {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.dynamic {
+    width: 48%;
+}
+
+.detail_title {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.detail_title .left {
+    display: block;
+    float: left;
+    border-left: 3px solid #de394a;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    text-indent: 5px;
+}
+
+.detail_title .right {
+    display: block;
+    float: right;
+    color: #888;
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.news {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.withImg {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.withImg img {
+    width: 100%;
+}
+
+.default {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.default .left{
+    float: left;
+    width: 80%;
+    
+}
+
+.default .right{
+    float: right;
+    width: 20%;
+    text-align: right;
+}
+
+
+.news_tip{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.7);
+    text-indent: 10px;
+    font-size: 16px;
+    color:#eee;
+}
+
+.notices{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.notice{
+    width: 100%;
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+
+.date{
+    width: 10%;
+    margin-left: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.monthDay{
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #de394a;
+}
+
+.year{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    background-color: #fff;
+}
+
+.notice_content{
+    width: 85%;
+}
+
+.notice_title{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.notice_title,.notice_detail{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+}
+
+/* 支持游戏 */
+.support_game {
+    width: 100%;
+    height: 640px;
+    text-align: center;
+    background-image: url("../../pages/bohe_cn/images/bg_game.png");
+}
+
+.game{
+    margin-top: 70px;
+}
+
+
+/* footer */
+.foot{
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(51, 50, 50);
+    color: #bbb;
+}
+
+/************ Form样式 ****************/
+.form_btn{
+    display: block;
+    width: 40%;
+    height: 60px;
+    border-radius: 5px;
+    border:0;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #eee;
+    background-color: rgb(41, 40, 40);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.form_btn_red{
+    background-color: #de394a;
+}
+
+.form_btn:hover{
+    color: #eee;
+    background-color: #de394a;
+}
+
+/************************ 注册 *************************/
+.shadow_box {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 150%;
+    bottom: 0;
+    background-color: rgba(27, 27, 27, 0.692);
+    transition: 0.8s;
+}
+
+.register_in {
+    left: 0;
+    transition: 0.8s;
+}
+
+.register_container{
+    width: 75%;
+    min-width: 1000px;
+    height: 100%;
+    position: relative;
+    float: right;
+    background: url('../../pages/bohe_cn/images/login_bg.png') right bottom no-repeat #fff;
+    background-size: 30%;
+}
+
+.login_logo {
+    position: absolute;
+    left: -47px;
+    top: 50%;
+    margin-top: -47px;
+    cursor: pointer;
+}
+
+.closeIcon {
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.register_title{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.register_title_content{
+    line-height: 70px;
+    color:#de394a;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.register_form{
+    width: 35%;
+    padding-top: 200px;
+}
+
+.form_input{
+    width: 85%;
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-bottom: 1px solid #de394a;
+}
+
+.input{
+    width: 100%;
+    line-height: 50px;
+    text-indent: 10px;
+    border:0;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.verificatioPic{
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+
+.verificatioImg{
+    vertical-align: middle;
+    height: 50px;
+}
+
+.verificatioCode{
+    width: 58%;
+}
+
+.countDownNum{
+    width: 58%;
+}
+
+.getCountDownNum{
+    width: 40%;
+    display: inline-block;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+}
+
+.getMethod{
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    color: #de394a;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.agreement{
+    width: 100%;
+    line-height: 30px;
+    margin-top: 50px;
+}
+
+
+
+/*********************** 登录 ***************************/
+.login_in{
+    left: 0;
+    transition: 0.8s;
+}
+
+.login_form {
+    width: 40%;
+    padding-top: 200px;
+}
+
+.form_login_input {
+    width: 75%;
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-bottom: 1px solid #de394a;
+}
+
+.frogetPwd {
+    width: 75%;
+    line-height: 30px;
+    margin-top: 50px;
+}
+
+.froget{
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+a.froget:hover{
+    color:#de394a;
+}
+
+.login_btn{
+    width: 75%;
+    cursor: pointer;
+}
+
+.login_otherway {
+    width: 75%;
+    margin-top: 30px;
+}
+
+.otherway_tit {
+    height: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.otherway_tit span {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 20px;
+    line-height: 20px;
+    width: 70%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #7D8E91;
+    font-family: 'Microsoft YaHei';
+}
+
+.otherway_main{
+    margin-top: 30px;
+}
+
+.login_otherway_list{
+    justify-content: center;
+}
+
+.login_otherway_li{
+    display:block;
+    width: 39px;
+    float:left;
+    margin-right:16px; 
+}
+
+
+.icon_wechart{
+    display:block;
+    background:url('../../pages/bohe_cn/images/wechart.png') no-repeat;
+    width:39px;
+    height:39px;
+}
+
+.icon_wechart:hover{
+    background:url('../../pages/bohe_cn/images/wechart_on.png') no-repeat;
+}
+
+.icon_qq {
+    display: block;
+    background: url('../../pages/bohe_cn/images/qq.png') no-repeat;
+    width: 39px;
+    height: 39px;
+}
+
+.icon_qq:hover {
+    background: url('../../pages/bohe_cn/images/qq_on.png') no-repeat;
+}
+
+.icon_weibo {
+    display: block;
+    background: url('../../pages/bohe_cn/images/weibo.png') no-repeat;
+    width: 39px;
+    height: 39px;
+}
+
+.icon_weibo:hover {
+    background: url('../../pages/bohe_cn/images/weibo_on.png') no-repeat;
+}
+
+.qrCode{
+    width: 40%;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.login_wechat{
+    width: 28%;
+}
+
+.qrCode_msg{
+    color:rgb(134, 233, 233);
+}
+
+
+/*********************** 绑定 ***************************/
+/* .binding_box {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(27, 27, 27, 0.692);
+    transition: 0.8s;
+} */
+
+.binding_in{
+    left: 0;
+    transition: 0.8s;
+}
+
+.binding_title_content{
+    line-height: 40px;
+    color: #de394a;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.display_none {
+    display: none;
+}
+
+/*************** 下载页面 ******************/
+.download{
+    width: 100%;
+    position: relative;
+}
+.download_list{
+    width: 100%;
+}
+.download_li {
+    width: 22%;
+    float: left;
+    height: 920px;
+    background: url('../../pages/bohe_cn/images/bg_windows.png');
+    background-size: 100%;
+}
+
+.download_li {
+    width: 22%;
+    float: left;
+    height: 920px;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.download_windows{
+    background: url('../../pages/bohe_cn/images/bg_windows.png');
+}
+
+.download_windows_hover{
+    width: 34%;
+    background: url('../../pages/bohe_cn/images/bg_windows_on.png');
+}
+
+.download_andriod {
+    background: url('../../pages/bohe_cn/images/bg_andriod.png');
+}
+
+.download_andriod_hover {
+    width: 34%;
+    background: url('../../pages/bohe_cn/images/bg_andriod_on.png');
+}
+
+.download_mac {
+    background: url('../../pages/bohe_cn/images/bg_mac.png');
+}
+
+.download_mac_hover {
+    width: 34%;
+    background: url('../../pages/bohe_cn/images/bg_mac_on.png');
+}
+
+.download_ios {
+    background: url('../../pages/bohe_cn/images/bg_ios.png');
+}
+
+.download_ios_hover {
+    width: 34%;
+    background: url('../../pages/bohe_cn/images/bg_ios_on.png');
+}
+
+.download_img{
+    width: 100%;
+    height: 120px;
+}
+
+.download_img_windows{
+    background: url('../../pages/bohe_cn/images/icon_windows.png') center no-repeat;
+}
+.download_img_andriod {
+    background: url('../../pages/bohe_cn/images/icon_andriod.png') center no-repeat;
+}
+
+.download_img_mac {
+    background: url('../../pages/bohe_cn/images/icon_mac.png') center no-repeat;
+}
+
+.download_img_ios {
+    background: url('../../pages/bohe_cn/images/icon_ios.png') center no-repeat;
+}
+
+
+.download_msg{
+    line-height: 30px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 550;
+    color: #333;
+}
+
+.download_windows_hover .download_msg{
+    color: #eee;
+}
+
+.download_andriod_hover .download_msg {
+    color: #eee;
+}
+
+.download_mac_hover .download_msg {
+    color: #eee;
+}
+
+.download_ios_hover .download_msg {
+    color: #eee;
+}
+
+.download_windows_hover .download_img {
+    background: url('../../pages/bohe_cn/images/icon_windows_on.png') center no-repeat;
+}
+
+.download_andriod_hover .download_img {
+    background: url('../../pages/bohe_cn/images/icon_andriod_on.png') center no-repeat;
+}
+
+.download_mac_hover .download_img {
+    background: url('../../pages/bohe_cn/images/icon_mac_on.png') center no-repeat;
+}
+
+.download_ios_hover .download_img {
+    background: url('../../pages/bohe_cn/images/icon_ios_on.png') center no-repeat;
+}
+
+.download_btn {
+    margin: 0 auto;
+    width: 40%;
+    background-color: #de394a;
+    border: 1px solid #de394a;
+    border-radius: 3px;
+    padding: 10px 0;
+    color: #eee;
+    cursor: pointer;
+}
+
+.download_windows_hover .download_btn{
+    padding: 15px 0;
+}
+
+.download_andriod_hover .download_btn {
+    padding: 15px 0;
+}
+
+.download_mac_hover .download_btn {
+    padding: 15px 0;
+}
+
+.download_ios_hover .download_btn {
+    padding: 15px 0;
+}
+
+/******************* 公告页面 ********************/
+.notice_page {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 100px;
+    min-height: 900px;
+    background:url("../../pages/bohe_cn/images/bg_right_top.png") right top no-repeat,
+    url("../../pages/bohe_cn/images/bg_right_bottom.png") right bottom no-repeat;
+    background-size: 100% 60%,35% 30%;
+}
+
+.title_box{
+    width: 70%;
+    line-height: 60px;
+    margin-left: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+.title_info{
+    display: inline-block;
+    line-height: 58px;
+    border-bottom:2px solid #de394a;
+}
+
+.notice_list {
+    width: 70%;
+    min-height: 650px;
+    margin-left: 100px;
+}
+
+.notice_li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 25px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.run_page{
+    width: 70%;
+    margin: 20px 0;
+    margin-left: 100px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/************** 资讯页面 *************/
+.new_imgs{
+    width: 30%;
+    box-sizing: border-box;
+    border:1px solid #999;
+    padding: 5px;
+}
+.new_img{
+    display: block;
+    width: 100%;
+}
+
+.new_content{
+    width: 65%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    bottom: 20px;
+}
+
+.news_title{
+    width: 100%;
+    line-height: 20px;
+}
+
+.new_title{
+    width: 70%;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nue_data{
+    width: 30%;
+    font-size: 12px;
+}
+
+.new_data{
+    height: 20px;
+    line-height: 20px;
+}
+
+.time_icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url('../../pages/bohe_cn/images/icon_time.png') no-repeat;
+}
+
+.new_detail{
+    padding: 10px 0;
+    margin-top: 15px;
+    text-indent: 24px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.go_detail {
+    width: 30%;
+    height: 30px;
+    background-color: #de394a;
+    border: 1px solid #de394a;
+    border-radius: 15px;
+    padding: 5px 0;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+ 

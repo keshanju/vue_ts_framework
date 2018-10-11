@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+    <!-- 定位的头像编辑弹出框-->
+    <div class="edit_photo_BH hide">
+        <div class="top_edit_info_BH">
+            <span data-lang="edit_avatar" class="one_edit_photo">编辑头像</span>
+            <img src="./images/member-cancel.png" alt="" class="cancel_img">
+        </div>
+        <!-- 上传图片 -->
+        <div class="upload_photo_BH">
+            <!-- 上传的图片位置 -->
+            <div class="pop_headImg" style="height: 170px">
+                <span data-lang="preview_picture">
+                    图片预览
+                </span>
+                <div>
+                    <img src="./images/member-photo-update.png" alt="" id="popHeadImg">
+                </div>
+            </div>
+            <!--  -->
+            <div v-show="avatarUrl != null" style="width: 400px;height: 400px;display: none">
+                <img style="width: 100%;height: 100%;" id="popHeadImg" :src="avatarUrl">
+            </div>
+            <!-- 放大缩小 -->
+            <div class="resize_photo_BH">
+                <img class="shink_member_BH" src="./images/member-shrink.png" alt="">
+                <div class="scroll_control">
+                    <span class="slide_block_BH"></span>
+                </div>
+                <img src="./images/member-enlarge.png" alt="" class="enlarge_member_BH">
+            </div>
+        </div>
+        <!-- 确定上传 -->
+        <span class="button_of_confirm">
+            <span class="upload_img_BH" data-lang="upload_pictures">上传图片</span>
+            <input type="file" accept="image/*" id="uploadImg" value="">
+            <span class="be_sure_to" id="isSure" data-lang="confirm">确定</span>
+        </span>
+        <!-- 图片上传脚本 -->
+        <!-- <script>
+            var filename,
+                bohe_pc_user,
+                user_url;
+            var upload = {
+                // 插件初始化
+                initCropper: function () {
+                    var image = document.getElementById('popHeadImg');
+                    this.cropper = new Cropper(image, {
+                        aspectRatio: 16 / 9,
+                        viewMode: 3,
+                        dragMode: "crop",
+                        modal: false,
+                        background: false,
+                        scalable: true,
+                        autoCropArea: 0.5,
+                        cropBoxResizable: true,
+                        cropBoxMovable: true,
+                        highlight: true,
+                        minContainerWidth: 170,
+                        minContainerHeight: 170,
+                        minCanvasWidth: 100,
+                        minCanvasHeight: 100,
+                        minCropBoxWidth: 100,
+                        minCropBoxHeight: 100,
+                        crop: function (event) {
+                        },
+                    });
+                },
+                // 选择本地图片
+                onChooseImage: function () {
+                    var self = this;
+                    $("#uploadImg").on('change', function () {
+                        var file = this.files[0];
+                        // 确认选择的文件是图片
+                        if (file.type.indexOf("image") == 0) {
+                            var reader = new FileReader();
+                            reader.readAsDataURL(file);
+                            reader.onload = function (e) {
+                                // 图片base64化
+                                filename = this.result;
+                                self.cropper.reset();
+                                self.cropper.replace(filename);
+                            };
+                        }
+                    });
+                },
+                // 上传图片接口
+                upLoadImg: function (json,callback) {
+                    $.ajax({
+                        type: 'post',
+                        url: ourURL + '/interface/user/upload',
+                        data: json,
+                        success: callback
+                    })
+                },
+                // 用户信息更改
+                editUserInfo: function (json,callback) {
+                    $.ajax({
+                        type: 'post',
+                        url: ourURL + '/interface/user/edit',
+                        data: json,
+                        success: callback
+                    })
+                },
+            }
+            $(function () {
+                upload.initCropper();
+                upload.onChooseImage();
+                $("#isSure").bind("click", function () {
+                    if(filename==undefined||filename==null||filename==""){
+                        return ;
+                    }
+                    //上传图片
+                    upload.upLoadImg({
+                        account_token: account_token,
+                        filename: filename,
+                        folder_name: bohe_pc_user//图片文件夹名称
+                    }, function (res) {
+                        if (res.code == 0) {
+                            user_url = 'http://picture.qimiao.com/'+res.data.file_path;// 拿到返回的图片的地址
+                            // 修改用户信息
+                            upload.editUserInfo({
+                                account_token: account_token,
+                                user_url: user_url
+                            },function (res) {
+                                if (res.code == 0) {
+                                    layer.msg(LANG["upload_success_info"], {anim:0} , function () {
+                                        $("#user-avtar-BH").attr("src", user_url);
+                                    });
+                                    $(".edit-photo-BH").hide();
+                                }   
+                            })
+                        }
+                    })
+                })
+            })
+        </script> -->
+        <!-- 图片上传脚本 -->
+    </div>
+
+    <!-- 页面顶部top -->
+    <div class="BH_Mac_member_top">
+        <div class="wrap_of_member_top">
+            <div class="user_info_details">
+                <div class="wrap_camera_show">
+                    <a href="javascript:;" class="camera_show">
+                        <img src="./images/touxiang.png" alt="" id="user-avtar-BH">
+                    </a>
+                    <!-- 定位的相机，默认隐藏，鼠标移上显示 -->
+                    <div class="wrap_img_show" style="display: none">
+                        <img src="./images/member-camera.png" alt="">
+                    </div>
+                </div>
+                <div class="member_info">
+                    <div class="top_of_user_info_BH_Mac">
+                        <h3 class="change_nickname">xxx@gmail.com</h3>
+                        <img src="./images/member-edit.png" alt="">
+                    </div>
+                    <!-- 点击用户信息编辑按钮出现编辑框 -->
+                    <div class="edit_nickname_BH" style="display: none">
+                        <input class="readin_nickname" type="text" placeholder="请编辑个性昵称" maxlength="23">
+                    </div>
+                    <div class="bottom_of_user_info_BH_Mac">
+                        <a href="javascript:;" id="count-hours">01</a>
+                        <h4 id="surplus-time" class="surplus_time"><span>剩余时间</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="recharge_on">
+                <a href="javascript:;" class="vip_recharge" id="vipRecharge">
+                    <img src="./images/member-vip.png" alt="" class="member_vip_BH">
+                    <h2 class="recharge_on_fee_BH" data-lang="renew">
+                        续费
+                    </h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 页面中部center -->
+    <div class="BH_Mac_member_center">
+        <ul>
+            <!-- 官方公告模块 -->
+            <li class="list_one_BH">
+                <!-- 标题信息 -->
+                <div class="offical_declear">
+                    <img src="./images/member-declare.png" alt="" >
+                    <h3 data-lang="Announcement" class="offical_notice_BH">     官方公告
+                    </h3>
+                </div>
+                <!-- 公告列表部分 -->
+                <ul class="explain_info">
+                    <li>
+                        <p>BOHE iphone版客户端重磅</p>
+                        <span>08/21</span>
+                    </li>
+                    <li>
+                        <p>BOHE iphone版客户端重磅</p>
+                        <span>08/21</span>
+                    </li>
+                    <li>
+                        <p>BOHE iphone版客户端重磅</p>
+                        <span>08/21</span>
+                    </li>
+                    <li>
+                        <p>BOHE iphone版客户端重磅</p>
+                        <span>08/21</span>
+                    </li>
+                    <li>
+                        <p>BOHE iphone版客户端重磅</p>
+                        <span>08/21</span>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- 常见问题模块 -->
+            <li class="list_two_BH">
+                <!-- 标题信息 -->
+                <div class="normal_questions">
+                    <img src="./images/zixun-BH.png" alt="">
+                    <h3 data-lang="game_information" class="game_consult_BH">游戏资讯</h3>
+                </div>
+                <!-- 游戏咨询 -->
+                <ul class="recover_info">
+                    <li>
+                        <p>Android APP客户端加速音乐掉线问题</p>
+                    </li>
+                    <li>
+                        <p>Android APP客户端加速音乐掉线问题</p>
+                    </li>
+                    <li>
+                        <p>Android APP客户端加速音乐掉线问题</p>
+                    </li>
+                    <li>
+                        <p>Android APP客户端加速音乐掉线问题</p>
+                    </li>
+                    <li>
+                        <p>Android APP客户端加速音乐掉线问题</p>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 页面底部bottom -->
+    <div class="BH_Mac_member_bottom">
+        <div class="connect_kefu">
+            <img src="./images/service-center.png" alt="" style="width: 83px;height:75px" class="img_kefu_BH">
+            <div class="consult_info_kefu">
+                <span class="service_for_you">BOHE客服 竭诚为您服务</span><br>
+                <span class="consult_time_kefu">咨询时间: 每天9:00~24:00</span>
+            </div>
+            <div class="button_to_kefu">
+                <a href="javascript:;">
+                    联系客服
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

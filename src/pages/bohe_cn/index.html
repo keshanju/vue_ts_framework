@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOHE</title>
+</head>
+
+<body>
+    <div id="app" class="app clearfix">
+        <!-- 导航 -->
+        <div id="nav" class="navBox">
+            <head-nav></head-nav>
+        </div>
+        <!-- 导航 end -->
+        <div class="container">
+            <!-- Banner -->
+            <div class="banner">
+                <img class="index_bg" src="images/index_bg.jpg" alt="">
+                <div class="banner_content">
+                    <img class="banner_logo" src="images/banner_logo.png" alt="">
+                    <p class="banner_tip">
+                        <span class="banner_tip_content">关注BOHE官方微信公众号 即刻加速爆款网游</span>
+                    </p>
+                    <p class="banner_tip">
+                        <span class="banner_tip_content">
+                            国内<i class="red">首款免费</i>网游加速器
+                        </span>
+                    </p>
+                    <div class="banner_tip">
+                        <span class="wechat_span banner_tip_content">
+                            <img class="wechat" src="images/code.png" alt="">
+                        </span>
+                    </div>
+                </div>
+                <img class="banner_icon" src="images/mouse.png" alt="">
+                <!-- 登录注册控制模块 -->
+                <div class="login_register clearfix">
+                    <user-control v-on:registerin="registerIn" v-on:loginin="loginIn"></user-control>
+                </div>
+            </div>
+            <!-- Banner end -->
+
+            <!-- 产品优势 -->
+            <div class="product_advantage">
+                <div class="title">
+                    <img class="index_title" src="images/tit_ys.png" alt="">
+                </div>
+                <div class="advantages flexBox">
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/01.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon01.png" alt="">
+                                </div>
+                                <p class="advantage_center">国内首款免费加速器</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">不花一分钱,享受顶级专线加速</p>
+                                    <p class="advantage_detail">贴心服务,尽情享受</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/02.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon02.png" alt="">
+                                </div>
+                                <p class="advantage_center">速度快</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">采用全球高速节点,提升国际传</p>
+                                    <p class="advantage_detail">输速率,尽享超流畅加速体验</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/03.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon03.png" alt="">
+                                </div>
+                                <p class="advantage_center">热门游戏一键加速</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">完美支持大量爆款、热门游戏,</p>
+                                    <p class="advantage_detail">持续更新</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/04.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon04.png" alt="">
+                                </div>
+                                <p class="advantage_center">隐私保护</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">7×12小时网络动态监护,随时保护</p>
+                                    <p class="advantage_detail">个人账号,为网络安全保驾护航</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/05.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon05.png" alt="">
+                                </div>
+                                <p class="advantage_center">多平台支持</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">Windows/Mac/Android/iOS多平</p>
+                                    <p class="advantage_detail">台支持,随时随地体验</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage_content">
+                            <img class="advantage_img" src="images/06.png" alt="">
+                            <div class="advantage_shadow">
+                                <div class="advantage_top">
+                                    <img class="advantage_tip" src="images/icon06.png" alt="">
+                                </div>
+                                <p class="advantage_center">全网节点覆盖</p>
+                                <div class="advantage_bottom">
+                                    <p class="advantage_detail">智能选择最优节点,体验超爽加速</p>
+                                    <p class="advantage_detail">快感</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- 实时动态 -->
+            <div class="real_time_dynamic">
+                <div class="title">
+                    <img class="index_title" src="images/tit_dt.png" alt="">
+                </div>
+                <div class="dynamics flexBox">
+                    <div class="dynamic layui-col-md6">
+                        <div class="detail_title clearfix">
+                            <span class="left">资讯</span>
+                            <span class="right">+更多</span>
+                        </div>
+                        <ul class="news">
+                            <li class="withImg">
+                                <img src="images/zx_ad01.jpg" alt="">
+                                <p class="news_tip">热游情报:LOL要做MMO游戏?魔兽再无点卡计费</p>
+                            </li>
+                            <li class="default clearfix">
+                                <a href="#" class="left overHidden">
+                                    绝地求生PGI：四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡
+                                </a>
+                                <span class="right">08/15</span>
+                            </li>
+                            <li class="default">
+                                <a href="#" class="left overHidden">
+                                    绝地求生PGI：四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡
+                                </a>
+                                <span class="right">08/15</span>
+                            </li>
+                            <li class="default">
+                                <a href="#" class="left overHidden">
+                                    绝地求生PGI：四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡四局比赛三把吃鸡
+                                </a>
+                                <span class="right">08/15</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dynamic layui-col-md6">
+                        <div class="detail_title clearfix">
+                            <span class="left">公告</span>
+                            <span class="right">+更多</span>
+                        </div>
+                        <ul class="notices">
+                            <li class="notice clearfix">
+                                <div class="left date">
+                                    <div class="monthDay">08/15</div>
+                                    <div class="year">2018</div>
+                                </div>
+                                <a href="#" class="right notice_content">
+                                    <p class="notice_title">BOHE加速器官方维护公告</p>
+                                    <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                </a>
+                            </li>
+                            <li class="notice clearfix">
+                                <div class="left date">
+                                    <div class="monthDay">08/15</div>
+                                    <div class="year">2018</div>
+                                </div>
+                                <a href="#" class="right notice_content">
+                                    <p class="notice_title">BOHE加速器官方维护公告</p>
+                                    <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                </a>
+                            </li>
+                            <li class="notice clearfix">
+                                <div class="left date">
+                                    <div class="monthDay">08/15</div>
+                                    <div class="year">2018</div>
+                                </div>
+                                <a href="#" class="right notice_content">
+                                    <p class="notice_title">BOHE加速器官方维护公告</p>
+                                    <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                </a>
+                            </li>
+                            <li class="notice clearfix">
+                                <div class="left date">
+                                    <div class="monthDay">08/15</div>
+                                    <div class="year">2018</div>
+                                </div>
+                                <a href="#" class="right notice_content">
+                                    <p class="notice_title">BOHE加速器官方维护公告</p>
+                                    <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- 支持游戏 -->
+            <div class="support_game">
+                <div class="title">
+                    <img class="index_title" src="images/tit_yx.png" alt="">
+                </div>
+                <img class="game" src="images/game.png" alt="">
+            </div>
+            <!-- end -->
+
+            <!-- footer -->
+            <Foot></Foot>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="goTop">
+            <div class="iconBox">
+                <img class="icon" src="images/smsIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/wechatIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/top.png" alt="">
+            </div>
+        </div>
+        <!-- 登录 -->
+        <div :class="{login_in:isLoginIn}" class="shadow_box">
+            <Login v-on:loginout="loginOut"></Login>
+        </div>
+        <!-- 注册 -->
+        <div :class="{register_in:isRegisterIn}" class="shadow_box">
+            <Register v-on:registerout="registerOut"></Register>
+        </div>
+        <!-- 绑定 -->
+        <div class="shadow_box">
+            <Binding></Binding>
+        </div>
+        <!-- 找回密码 -->
+        <div class="shadow_box">
+            <find-pwd></find-pwd>
+        </div>
+    </div>
+</body>
+
+</html>

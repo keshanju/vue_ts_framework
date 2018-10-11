@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title data-lang="third_login">第三方登陆</title>
+</head>
+
+<body>
+    <!-- 已注册直接绑定 -->
+    <div class="login_frame_BH">
+        <!-- 描述与取消 -->
+        <div class="header_of_third_login_BH">
+            <span class="is_login" data-lang="bind_account">请绑定已注册账号</span>
+            <img src="./images/member-cancel.png" alt="" class="cansel_login_frame">
+        </div>
+        <!-- 已注册未绑定 -->
+        <div class="login_info_BH">
+            <!-- 手机号绑定登录 -->
+            <ul class="mobile_login_BH">
+                <!-- 手机号 -->
+                <li class="mobile_info">
+                    <input type="text" placeholder="手机号" id="mobile-phone" class="mobile_phone">
+                    <h5 id="forget-msg" class="warning_msg"></h5>
+                    <h5 id="forget-msg-mobile" class="warning-msg"></h5>
+                </li>
+                <!-- 图形验证码 -->
+                <li class="vertifycode_info">
+                    <input type="text" placeholder="图形验证码" id="verifyImageMobileCode">
+                    <div class="imgcode_BH"><img src="" id="imagesCode" data-info="" /></div>
+
+                    <h5 id="forgetMsg" class="warning_msg"></h5>
+                </li>
+                <!-- 短信验证码 -->
+                <li class="messagecode_info">
+                    <input type="text" placeholder="验证码" id="verifyIdMobileCode">
+                    <div class="wrap_post_code">
+                        <h4 id="getVerifyMobileCode" class="get_verify_mobile_code">发短信</h4>
+                        <span class="line_post"></span>
+                        <h4 id="getVoiceMobilecode" class="get_voice_mobile_code">发语音</h4>
+                    </div>
+                </li>
+                <!-- 登录密码设置 -->
+                <li class="hide" id="setPassword">
+                    <input type="password" placeholder="设置登录密码" id="password-been-set">
+                </li>
+
+                <li class="bind_login_BH" id="bind-loginmobile-BH">
+                    <p class="contend_bind_info">绑定并登录</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 未注册先注册继而一并绑定 -->
+    <div class="nologin_frame_BH hide">
+        <!-- 描述与取消 -->
+        <div class="header_of_third_login_BH">
+            <span class="is_login" data-lang="bind_account">该账号未被注册, 请先注册</span>
+            <img src="./images/member-cancel.png" alt="" class="cansel_login_frame">
+        </div>
+        <!-- 未注册未绑定 -->
+        <div class="nologin_info_BH">
+            <input type="password" placeholder="设置登录密码" class="set_login_password">
+            <a href="javascript:;" class="register_bind">注册并绑定</a>
+        </div>
+    </div>
+</body>
+
+</html>

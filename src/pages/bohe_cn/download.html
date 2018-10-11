@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOHE</title>
+</head>
+
+<body>
+    <div id="app" class="app clearfix">
+        <!-- 导航 -->
+        <div id="nav" class="navBox">
+            <head-nav></head-nav>
+        </div>
+        <!-- 导航 end -->
+        <div class="container">
+            <div class="download">
+                <ul class="download_list clearfix">
+                    <li class="download_li download_windows">
+                        <div class="download_img download_img_windows"></div>
+                        <p class="download_msg">windows客户端</p>
+                        <button class="download_btn">点击下载</button>
+                    </li>
+                    <li class="download_li download_andriod download_andriod_hover">
+                        <div class="download_img download_img_andriod"></div>
+                        <p class="download_msg">Andriod客户端</p>
+                        <button class="download_btn">点击下载</button>
+                    </li>
+                    <li class="download_li download_mac">
+                        <div class="download_img download_img_mac"></div>
+                        <p class="download_msg">Mac客户端</p>
+                        <button class="download_btn">点击下载</button>
+                    </li>
+                    <li class="download_li download_ios">
+                        <div class="download_img download_img_ios"></div>
+                        <p class="download_msg">IOS客户端</p>
+                        <button class="download_btn">点击下载</button>
+                    </li>
+                </ul>
+                <!-- 登录注册控制模块 -->
+                <div class="login_register clearfix">
+                    <user-control v-on:registerin="registerIn" v-on:loginin="loginIn"></user-control>
+                </div>
+            </div>
+            <!-- footer -->
+            <Foot></Foot>
+        </div>
+        <!-- 登录 -->
+        <div :class="{login_in:isLoginIn}" class="shadow_box">
+            <Login v-on:loginout="loginOut"></Login>
+        </div>
+        <!-- 注册 -->
+        <div :class="{register_in:isRegisterIn}" class="shadow_box">
+            <Register v-on:registerout="registerOut"></Register>
+        </div>
+        <!-- 绑定 -->
+        <div class="shadow_box">
+            <Binding></Binding>
+        </div>
+        <!-- 找回密码 -->
+        <div class="shadow_box">
+            <find-pwd></find-pwd>
+        </div>
+    </div>
+</body>
+
+</html>

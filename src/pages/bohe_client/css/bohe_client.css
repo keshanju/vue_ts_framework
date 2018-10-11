@@ -1,0 +1,930 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+html {
+  background: #000;
+}
+input {
+  height: 26px;
+  text-indent: 6px;
+  outline: none;
+  border: 0;
+}
+input::placeholder {
+  font-size: 12px;
+  color: #a9b5cc;
+  letter-spacing: 0.75px;
+}
+.common {
+  font-size: 16px;
+}
+.chose {
+  position: relative;
+  border: 1px solid #de394a !important;
+}
+.chose img {
+  width: 14px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+.disabled {
+  background: #999999;
+  color: #999999;
+}
+.hide {
+  display: none;
+}
+body {
+  font-family: "Microsoft YaHei";
+  background: #4f596d;
+  width: 511px;
+  height: 371px;
+  position: fixed;
+  /*
+    会员中心页面
+    */
+  /*
+    客服中心
+    */
+  /*
+    三方登录
+    */
+}
+body .edit_photo_BH {
+  width: 325px;
+  height: 358px;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 21px;
+  z-index: 333;
+}
+body .edit_photo_BH .top_edit_info_BH {
+  margin: 6px 9px 0 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .edit_photo_BH .top_edit_info_BH .one_edit_photo {
+  font-size: 12px;
+  color: #4f596d;
+  letter-spacing: 0.75px;
+}
+body .edit_photo_BH .top_edit_info_BH .cancel_img {
+  width: 8px;
+  cursor: pointer;
+}
+body .edit_photo_BH .upload_photo_BH {
+  margin: 41px 72px 0 83px;
+}
+body .edit_photo_BH .upload_photo_BH .pop_headImg {
+  text-align: center;
+  background: #fff;
+}
+body .edit_photo_BH .upload_photo_BH .pop_headImg img {
+  width: 170px;
+  height: 170px;
+}
+body .edit_photo_BH .upload_photo_BH .resize_photo_BH {
+  width: 170px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .edit_photo_BH .upload_photo_BH .resize_photo_BH .shink_member_BH {
+  width: 13px;
+}
+body .edit_photo_BH .upload_photo_BH .resize_photo_BH .scroll_control {
+  width: 137px;
+  height: 8px;
+  background: #e2e7f1;
+  border: 1px solid #aeb8cb;
+  border-radius: 10px;
+  position: relative;
+}
+body .edit_photo_BH .upload_photo_BH .resize_photo_BH .scroll_control .slide_block_BH {
+  width: 18px;
+  height: 8px;
+  background: #4f596d;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+body .edit_photo_BH .upload_photo_BH .resize_photo_BH .enlarge_member_BH {
+  width: 13px;
+}
+body .edit_photo_BH .button_of_confirm {
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 191px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  overflow: hidden;
+  margin: 27px 62px 45px 72px;
+}
+body .edit_photo_BH .button_of_confirm .upload_img_BH {
+  width: 90px;
+  height: 28px;
+  background: #4f596d;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+body .edit_photo_BH .button_of_confirm input {
+  opacity: 0;
+  width: 90px;
+  height: 30px;
+}
+body .edit_photo_BH .button_of_confirm .be_sure_to {
+  width: 90px;
+  height: 30px;
+  background: #4f596d;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+}
+body .BH-Mac-version {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  height: 16px;
+  line-height: 16px;
+  font-family: lighter;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: -0.09px;
+}
+body .BH_Mac_member_top {
+  width: 471px;
+  padding-top: 33px;
+  box-sizing: border-box;
+  height: 106px;
+  margin-left: 21px;
+}
+body .BH_Mac_member_top .wrap_of_member_top {
+  width: 471px;
+  border-bottom: 1px solid #5a667c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details {
+  width: 80%;
+  height: 58px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .wrap_camera_show {
+  float: left;
+  position: relative;
+  width: 58px;
+  height: 58px;
+  margin-right: 11px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .wrap_camera_show .camera_show {
+  display: block;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .wrap_camera_show .camera_show img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 0;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .wrap_camera_show .wrap_img_show {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .wrap_camera_show .wrap_img_show img {
+  width: 29.2px;
+  height: 22.7px;
+  vertical-align: middle;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info {
+  float: left;
+  width: 240px;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .top_of_user_info_BH_Mac {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .top_of_user_info_BH_Mac .change_nickname {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 15px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .top_of_user_info_BH_Mac img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .top_of_user_info_BH_Mac img:hover {
+  background: url(../images/member-edit-hover.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .edit_nickname_BH {
+  padding: 0 5px 0 4px;
+  height: 20px;
+  line-height: 20px;
+  background: #303745;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .edit_nickname_BH .readin_nickname {
+  width: 200px;
+  height: 16px;
+  outline: none;
+  border: 0;
+  background: #303745;
+  color: #8f9eb9;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .edit_nickname_BH .readin_nickname::placeholder {
+  font-size: 12px;
+  color: #8f9eb9;
+  letter-spacing: 0.75px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .bottom_of_user_info_BH_Mac {
+  margin-top: 8px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .bottom_of_user_info_BH_Mac a {
+  width: 38px;
+  height: 20px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 42px;
+  color: #ffffff;
+  background: #13adcf;
+  margin-right: 9px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .bottom_of_user_info_BH_Mac .surplus_time {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+  font-size: 12px;
+  color: #8f9eb9;
+}
+body .BH_Mac_member_top .wrap_of_member_top .user_info_details .member_info .bottom_of_user_info_BH_Mac .surplus_time:hover {
+  opacity: 0.8;
+}
+body .BH_Mac_member_top .wrap_of_member_top .recharge_on {
+  width: 85px;
+  border-radius: 2px;
+  background-color: #ffb656;
+  line-height: 34px;
+  text-align: center;
+  height: 34px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .recharge_on .vip_recharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .BH_Mac_member_top .wrap_of_member_top .recharge_on .vip_recharge .member_vip_BH {
+  border: 0;
+  width: 16px;
+  height: 14px;
+  margin-right: 5px;
+}
+body .BH_Mac_member_top .wrap_of_member_top .recharge_on .vip_recharge .recharge_on_fee_BH {
+  font-size: 14px;
+  color: #ffffff;
+}
+body .BH_Mac_member_top .wrap_of_member_top .recharge_on .vip_recharge:hover {
+  background: #eaa243;
+}
+body .BH_Mac_member_center {
+  width: 471px;
+  margin: 17px 20px 17px 21px;
+  overflow: hidden;
+}
+body .BH_Mac_member_center .list_one_BH {
+  float: left;
+  width: 223px;
+  margin-right: 25px;
+}
+body .BH_Mac_member_center .list_one_BH .offical_declear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 7px;
+}
+body .BH_Mac_member_center .list_one_BH .offical_declear img {
+  width: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+body .BH_Mac_member_center .list_one_BH .offical_declear .offical_notice_BH {
+  font-size: 12px;
+  line-height: 16px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 16px;
+  font-weight: normal;
+  letter-spacing: -0.09px;
+  color: #ffffff;
+}
+body .BH_Mac_member_center .list_one_BH .explain_info li {
+  font-size: 12px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+body .BH_Mac_member_center .list_one_BH .explain_info li p {
+  width: 75%;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #8f9eb9;
+}
+body .BH_Mac_member_center .list_one_BH .explain_info li p:hover {
+  color: #baccec;
+  cursor: pointer;
+}
+body .BH_Mac_member_center .list_one_BH .explain_info li span {
+  width: 20%;
+  float: right;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #8f9eb9;
+}
+body .BH_Mac_member_center .list_one_BH .explain_info li span:hover {
+  color: #baccec;
+}
+body .BH_Mac_member_center .list_two_BH {
+  float: left;
+  width: 223px;
+  margin-right: 0;
+}
+body .BH_Mac_member_center .list_two_BH .normal_questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 7px;
+}
+body .BH_Mac_member_center .list_two_BH .normal_questions img {
+  margin-right: 4px;
+  width: 12px;
+  vertical-align: middle;
+}
+body .BH_Mac_member_center .list_two_BH .normal_questions .game_consult_BH {
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  letter-spacing: -0.09px;
+  color: #ffffff;
+}
+body .BH_Mac_member_center .list_two_BH .recover_info li {
+  font-size: 12px;
+  color: #8f9eb9;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+body .BH_Mac_member_center .list_two_BH .recover_info p {
+  width: 100%;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+body .BH_Mac_member_center .list_two_BH .recover_info p:hover {
+  color: #baccec;
+  cursor: pointer;
+}
+body .BH_Mac_member_bottom {
+  width: 471px;
+  margin-right: 20px;
+  margin-left: 21px;
+}
+body .BH_Mac_member_bottom .connect_kefu {
+  height: 104px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #414a5b;
+  border-radius: 4px;
+}
+body .BH_Mac_member_bottom .connect_kefu .consult_info_kefu .service_for_you {
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.88px;
+}
+body .BH_Mac_member_bottom .connect_kefu .consult_info_kefu .consult_time_kefu {
+  font-size: 12px;
+  color: #8f9eb9;
+  letter-spacing: 0.75px;
+}
+body .BH_Mac_member_bottom .connect_kefu .button_to_kefu {
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #de394a;
+  border-radius: 2px;
+}
+body .BH_Mac_member_bottom .connect_kefu .button_to_kefu a {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.75px;
+}
+body .service-center-BH-Mac {
+  margin: 75px 44px 59px 55px;
+}
+body .service-center-BH-Mac ul {
+  overflow: hidden;
+}
+body .service-center-BH-Mac ul li {
+  float: left;
+  text-align: center;
+  width: 215px;
+  height: 195px;
+}
+body .service-center-BH-Mac ul li img {
+  width: 215px;
+  height: 195px;
+}
+body .service-center-BH-Mac ul .connect-custumers {
+  width: 197px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .service-center-BH-Mac ul .connect-custumers h3 {
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.88px;
+  margin-bottom: 16px;
+}
+body .service-center-BH-Mac ul .connect-custumers a {
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  background: #de394a;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+body .service-center-BH-Mac ul .connect-custumers a:hover {
+  background: #cb3242;
+}
+body .service-center-BH-Mac ul .connect-custumers .consult-time {
+  font-size: 12px;
+  color: #8f9eb9;
+  letter-spacing: 0.75px;
+}
+body .connect-ways-BH-Mac {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+body .connect-ways-BH-Mac .logo-and-offical-website {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 105px;
+  height: 35px;
+  background: #3e4758;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+}
+body .connect-ways-BH-Mac .logo-and-offical-website img {
+  width: 18px;
+  margin-right: 8px;
+}
+body .connect-ways-BH-Mac .logo-and-offical-website span {
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+}
+body .connect-ways-BH-Mac .service-phone {
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+  margin-left: 28px;
+}
+body .connect-ways-BH-Mac .consult-time {
+  margin-left: 12px;
+  font-size: 12px;
+  color: #8f9eb9;
+  letter-spacing: 0.75px;
+}
+body .login_frame_BH {
+  width: 253px;
+  background: #fff;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+body .login_frame_BH .header_of_third_login_BH {
+  padding-top: 6px;
+  box-sizing: border-box;
+  margin: 0 11px 31px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .login_frame_BH .header_of_third_login_BH .is_login {
+  font-size: 12px;
+  color: #3e4758;
+  letter-spacing: 0.75px;
+}
+body .login_frame_BH .header_of_third_login_BH .cansel_login_frame {
+  width: 8px;
+  padding: 3px;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH li {
+  width: 215px;
+  height: 30px;
+  margin: 0 auto 8px;
+  border: 1px solid #c3c9d5;
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .mobile_info {
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .mobile_info .china_mobile {
+  width: 68px;
+  height: 26px;
+  margin-right: 8px;
+  border: 1px solid #c3c9d5;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .mobile_info .china_mobile input {
+  width: 50px;
+  height: 24px;
+  color: #3e4758;
+  letter-spacing: 0.75px;
+  font-size: 12px;
+  outline: none;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .mobile_info .china_mobile .arrow_qm {
+  width: 5px;
+  color: #8a97af;
+  padding: 0 8px 0 0;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .mobile_info .mobile_phone {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #c3c9d5;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .vertifycode_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #c3c9d5;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .vertifycode_info input {
+  width: 80%;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .vertifycode_info .imgcode_BH {
+  width: 53px;
+  height: 20px;
+  display: block;
+  box-sizing: border-box;
+  margin-right: 9px;
+  cursor: pointer;
+  background: #d8d8d8;
+  border: 1px solid #979797;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info input {
+  width: 100px;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info .wrap_post_code {
+  margin-right: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info .wrap_post_code .get_verify_mobile_code {
+  font-size: 12px;
+  color: #3e4758;
+  letter-spacing: 0.75px;
+  font-weight: normal;
+  cursor: pointer;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info .wrap_post_code .get_voice_mobile_code {
+  font-size: 12px;
+  color: #3e4758;
+  letter-spacing: 0.75px;
+  font-weight: normal;
+  cursor: pointer;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .messagecode_info .wrap_post_code .line_post {
+  width: 1px;
+  background: #c3c9d5;
+  height: 10px;
+  color: #c3c9d5;
+  margin: 0 5px;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .bind_login_BH {
+  margin: 16px auto 26px;
+  text-align: center;
+  line-height: 35px;
+  width: 215px;
+  height: 35px;
+  background: #4f596d;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.88px;
+  cursor: pointer;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .bind_login_BH:hover {
+  opacity: 0.9;
+}
+body .login_frame_BH .login_info_BH .mobile_login_BH .warning_msg {
+  position: absolute;
+  right: 36px;
+  bottom: 28px;
+  color: red;
+  font-size: 12px;
+  z-index: 33;
+}
+body .nologin_frame_BH {
+  width: 253px;
+  height: 178px;
+  background: #fff;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+body .nologin_frame_BH .header_of_third_login_BH {
+  padding-top: 6px;
+  box-sizing: border-box;
+  margin: 0 11px 31px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+body .nologin_frame_BH .header_of_third_login_BH .is_login {
+  font-size: 12px;
+  color: #3e4758;
+  letter-spacing: 0.75px;
+}
+body .nologin_frame_BH .header_of_third_login_BH .cansel_login_frame {
+  width: 8px;
+  padding: 3px;
+}
+body .nologin_frame_BH .nologin_info_BH {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: #FFF;
+  text-align: center;
+}
+body .nologin_frame_BH .nologin_info_BH .set_login_password {
+  width: 215px;
+  height: 30px;
+  border: 1px solid #C3C9D5;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+body .nologin_frame_BH .nologin_info_BH .register_bind {
+  width: 215px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFF;
+  display: inline-block;
+  background: #4F596D;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}

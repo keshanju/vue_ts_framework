@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOHE</title>
+</head>
+
+<body>
+    <div id="app" class="app clearfix">
+        <!-- 导航 -->
+        <div id="nav" class="navBox">
+            <head-nav></head-nav>
+        </div>
+        <!-- 导航 end -->
+        <div class="container">
+            <div class="notice_page">
+                <div class="title_box">
+                    <span class="title_info">热门资讯</span>
+                </div>
+                <ul class="notice_list">
+                    <li class="notice_li clearfix">
+                        <div class="left new_imgs">
+                            <img class="new_img" src="images/img01.png" alt="">
+                        </div>
+                        <a href="#" class="right new_content">
+                            <div class="news_title clearfix">
+                                <p class="new_title left overHidden">BOHE加速器官方维护公告</p>
+                                <p class="right new_data">
+                                    <i class="time_icon"></i>
+                                    2018-06-08 12:00:08
+                                </p>
+                            </div>
+                            <p class="new_detail">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                            <button class="go_detail">查看详情</button>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left new_imgs">
+                            <img class="new_img" src="images/img02.png" alt="">
+                        </div>
+                        <a href="#" class="right new_content">
+                            <div class="news_title clearfix">
+                                <p class="new_title left overHidden">BOHE加速器官方维护公告</p>
+                                <p class="right new_data">
+                                    <i class="time_icon"></i>
+                                    2018-06-08 12:00:08
+                                </p>
+                            </div>
+                            <p class="new_detail">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                            <button class="go_detail">查看详情</button>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left new_imgs">
+                            <img class="new_img" src="images/img03.png" alt="">
+                        </div>
+                        <a href="#" class="right new_content">
+                            <div class="news_title clearfix">
+                                <p class="new_title left overHidden">BOHE加速器官方维护公告</p>
+                                <p class="right new_data">
+                                    <i class="time_icon"></i>
+                                    2018-06-08 12:00:08
+                                </p>
+                            </div>
+                            <p class="new_detail">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                            <button class="go_detail">查看详情</button>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left new_imgs">
+                            <img class="new_img" src="images/img03.png" alt="">
+                        </div>
+                        <a href="#" class="right new_content">
+                            <div class="news_title clearfix">
+                                <p class="new_title left overHidden">BOHE加速器官方维护公告</p>
+                                <p class="right new_data">
+                                    <i class="time_icon"></i>
+                                    2018-06-08 12:00:08
+                                </p>
+                            </div>
+                            <p class="new_detail">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                            <button class="go_detail">查看详情</button>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left new_imgs">
+                            <img class="new_img" src="images/img03.png" alt="">
+                        </div>
+                        <a href="#" class="right new_content">
+                            <div class="news_title clearfix">
+                                <p class="new_title left overHidden">BOHE加速器官方维护公告</p>
+                                <p class="right new_data">
+                                    <i class="time_icon"></i>
+                                    2018-06-08 12:00:08
+                                </p>
+                            </div>
+                            <p class="new_detail">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                            <button class="go_detail">查看详情</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="run_page">
+                    <el-pagination background layout="prev, pager, next" :total="100">
+                    </el-pagination>
+                </div>
+                <!-- 登录注册控制模块 -->
+                <div class="login_register clearfix">
+                    <user-control v-on:registerin="registerIn" v-on:loginin="loginIn"></user-control>
+                </div>
+            </div>
+            <!-- footer -->
+            <Foot></Foot>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="goTop">
+            <div class="iconBox">
+                <img class="icon" src="images/smsIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/wechatIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/top.png" alt="">
+            </div>
+        </div>
+        <!-- 登录 -->
+        <div :class="{login_in:isLoginIn}" class="shadow_box">
+            <Login v-on:loginout="loginOut"></Login>
+        </div>
+        <!-- 注册 -->
+        <div :class="{register_in:isRegisterIn}" class="shadow_box">
+            <Register v-on:registerout="registerOut"></Register>
+        </div>
+        <!-- 绑定 -->
+        <div class="shadow_box">
+            <Binding></Binding>
+        </div>
+        <!-- 找回密码 -->
+        <div class="shadow_box">
+            <find-pwd></find-pwd>
+        </div>
+    </div>
+</body>
+
+</html>

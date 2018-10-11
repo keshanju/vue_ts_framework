@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    background: #262c2f;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+/* 
+常见问题
+*/
+
+.list_of_normalquestion {
+    margin-left: 0.2rem;
+    background: #262c2f;
+    color: #cccccc;
+}
+
+.nomal_selected li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.02rem solid #2e3336;
+    margin: 0.5rem auto 0 auto;
+
+}
+
+.nomal_selected li .contend_lists.detail_active {
+    color: #de394a;
+}
+
+.nomal_selected li a {
+    margin-right: 0.25rem;
+    margin-bottom: 0.3rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background: url(../images/defalut-arrow-small.png) no-repeat;
+    background-size: 0.14rem 0.24rem;
+}
+
+.nomal_selected li a.question_active {
+    background: url(../images/normal-question-small.png) no-repeat center center;
+    background-size: 0.24rem 0.14rem;
+}
+
+.contend_lists {
+    font-size: 0.28rem;
+    text-indent: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.content_active {
+    color: #de394a;
+}
+
+.detail_content {
+    background: #1d2123;
+}
+
+.detail_content {
+    padding: 0.2rem 0.3rem;
+    box-sizing: border-box;
+    font-size: 0.26rem;
+    color: #FFF;
+}
+
+/*
+关于我们 
+*/
+
+.aboutUs_container {
+    margin: 0.8rem 0.66rem 1.1rem;
+}
+
+.bh_edition {
+    text-align: center;
+}
+
+.bh_edition img {
+    width: 1.74rem;
+}
+
+.net_speed_BH {
+    color: #fa433b;
+    font-size: 0.36rem;
+    font-weight: 100;
+}
+
+.version_num_BH {
+    color: #686a6a;
+    font-size: 0.3rem;
+    margin: 0.28rem auto;
+    font-weight: 100;
+}
+
+.offical_gettouch {
+    color: #e8e8e8;
+    font-size: 0.3rem;
+    font-weight: normal;
+}
+
+.offical_gettouch li {
+    margin-top: 0.75rem;
+}
+
+.offical_gettouch a {
+    color: #ad3643;
+}
+
+.bh_wechat_number {
+    text-align: center;
+}
+
+.bh_wechat_number img {
+    vertical-align: middle;
+    margin-top: 0.5rem;
+}
+
+.wechat_BH {
+    margin-top: 0.14rem;
+    font-size: 0.24rem;
+    color: #FFF;
+}
+
+/* 
+公告详情 
+*/
+.outer_wrap_bullitin_BH {
+    padding: .4rem 0 0 .25rem;
+    background: #262c2f;
+}
+
+.header_notice_details_BH {
+    padding-left: .1rem;
+    padding-bottom: .2rem;
+    border-bottom: .01rem solid #505050;
+}
+
+.contents_update_BH {
+    line-height: .46rem;
+    color: #FFF;
+    font-size: .32rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.publish_time_BH {
+    margin: .2rem auto;
+    color: #b6b7b7;
+    font-size: .24rem;
+}
+
+.info_detail_notice_BH {
+    font-size: .28rem;
+    padding-right: 0.4rem;
+    color: #CCC;
+}
+
+.notice_content img {
+    max-width: 100%;
+}

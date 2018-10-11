@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BOHE</title>
+</head>
+
+<body>
+    <div id="app" class="app clearfix">
+        <!-- 导航 -->
+        <div id="nav" class="navBox">
+            <head-nav></head-nav>
+        </div>
+        <!-- 导航 end -->
+        <div class="container">
+            <div class="notice_page">
+                <div class="title_box">
+                    <span class="title_info">全部公告</span>
+                </div>
+                <ul class="notice_list">
+                    <li class="notice_li clearfix">
+                        <div class="left date">
+                            <div class="monthDay">08/15</div>
+                            <div class="year">2018</div>
+                        </div>
+                        <a href="#" class="right notice_content">
+                            <p class="notice_title">BOHE加速器官方维护公告</p>
+                            <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left date">
+                            <div class="monthDay">08/15</div>
+                            <div class="year">2018</div>
+                        </div>
+                        <a href="#" class="right notice_content">
+                            <p class="notice_title">BOHE加速器官方维护公告</p>
+                            <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left date">
+                            <div class="monthDay">08/15</div>
+                            <div class="year">2018</div>
+                        </div>
+                        <a href="#" class="right notice_content">
+                            <p class="notice_title">BOHE加速器官方维护公告</p>
+                            <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left date">
+                            <div class="monthDay">08/15</div>
+                            <div class="year">2018</div>
+                        </div>
+                        <a href="#" class="right notice_content">
+                            <p class="notice_title">BOHE加速器官方维护公告</p>
+                            <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                        </a>
+                    </li>
+                    <li class="notice_li clearfix">
+                        <div class="left date">
+                            <div class="monthDay">08/15</div>
+                            <div class="year">2018</div>
+                        </div>
+                        <a href="#" class="right notice_content">
+                            <p class="notice_title">BOHE加速器官方维护公告</p>
+                            <p class="notice_detail overHidden">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="run_page">
+                    <el-pagination background layout="prev, pager, next" :total="100">
+                    </el-pagination>
+                </div>
+                <!-- 登录注册控制模块 -->
+                <div class="login_register clearfix">
+                    <user-control v-on:registerin="registerIn" v-on:loginin="loginIn"></user-control>
+                </div>
+            </div>
+            <!-- footer -->
+            <Foot></Foot>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="goTop">
+            <div class="iconBox">
+                <img class="icon" src="images/smsIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/wechatIcon.png" alt="">
+            </div>
+            <div class="iconBox">
+                <img class="icon" src="images/top.png" alt="">
+            </div>
+        </div>
+        <!-- 登录 -->
+        <div :class="{login_in:isLoginIn}" class="shadow_box">
+            <Login v-on:loginout="loginOut"></Login>
+        </div>
+        <!-- 注册 -->
+        <div :class="{register_in:isRegisterIn}" class="shadow_box">
+            <Register v-on:registerout="registerOut"></Register>
+        </div>
+        <!-- 绑定 -->
+        <div class="shadow_box">
+            <Binding></Binding>
+        </div>
+        <!-- 找回密码 -->
+        <div class="shadow_box">
+            <find-pwd></find-pwd>
+        </div>
+    </div>
+</body>
+
+</html>
