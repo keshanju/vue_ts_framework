@@ -26,6 +26,8 @@ body {
 body .header_nav {
   width: 1200px;
   height: 70px;
+  padding: 10px 20px;
+  box-sizing: border-box;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,4 +89,20 @@ body .header_nav .login_frame_bh .login_choose_bh ul li a {
   border-radius: 2px;
   margin-left: 8px;
   font-size: 14px;
+}
+body .footer_nav {
+  background: #3E474F;
+  width: 100%;
+  padding: 50px 30px;
+}
+body .footer_nav .footer_connect {
+  padding: 50px 20px;
+  border-bottom: 1px solid #4B5660;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer_nav .footer_connect .wrap_of_links_bh dl {
+  float: left;
+  margin-right: 60px;
 }
