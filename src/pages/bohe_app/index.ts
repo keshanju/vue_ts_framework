@@ -2,7 +2,6 @@ import 'vuetify/dist/vuetify.min.css';
 import Vuetify from  'vuetify';
 import Vue from 'vue';
 import Component from 'vue-class-component';
-// import Markup from ''
 Vue.use(Vuetify);  
 Vue.config.productionTip = false;
 @Component({
@@ -12,6 +11,7 @@ Vue.config.productionTip = false;
 })
 class Test extends Vue {
     public items:Array<object> = []
+    public source: String = ''
 };
 
 //
