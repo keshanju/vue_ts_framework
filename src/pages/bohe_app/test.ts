@@ -6,4 +6,4 @@ class Abb extends Vue {
 
 };
 //
-new Abb().$mount('#app');
+new Abb().$mount('#inspire');
