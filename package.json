@@ -11,10 +11,12 @@
     "axios": "^0.18.0",
     "element-ui": "^2.4.8",
     "jquery": "^3.3.1",
+    "mint-ui": "^2.2.13",
     "ts-md5": "^1.2.4",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.2.0"
+    "vue-property-decorator": "^7.2.0",
+    "vuetify": "^1.2.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",

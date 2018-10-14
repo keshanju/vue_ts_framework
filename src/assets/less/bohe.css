@@ -1,0 +1,78 @@
+ul {
+  list-style: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+.left_bh {
+  float: left;
+}
+.right_bh {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+body {
+  color: #FFF;
+  font-family: "Microsoft Yahei";
+  background: #000;
+}
+body .header_nav {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .header_nav .logo_bh img {
+  border: 0;
+}
+body .header_nav .header_nav_list ul {
+  overflow: hidden;
+}
+body .header_nav .header_nav_list ul li {
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 38px;
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 5px;
+}
+body .header_nav .header_nav_list ul li a:hover {
+  color: #de394a;
+}
+body .header_nav .header_nav_list ul li:hover {
+  border-bottom: 1px solid #de394a;
+}
+body .header_nav .login_frame_bh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header_nav .login_frame_bh .btn_change_bh {
+  display: block;
+  color: #fff;
+  margin-right: 20px;
+}
+body .header_nav .login_frame_bh .login_choose_bh ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+body .header_nav .login_frame_bh .login_choose_bh ul li {
+  float: left;
+  display: block;
+}
+body .header_nav .login_frame_bh .login_choose_bh ul li a {
+  padding: 5px 9px;
+  border-radius: 2px;
+  margin-left: 8px;
+  font-size: 14px;
+}

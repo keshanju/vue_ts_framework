@@ -1,16 +1,16 @@
-// import $ from "jquery";
-
+import '../../assets/less/bohe.less';
 import Vue from 'vue';
-
-import {Checkbox, Input, Option, Select} from 'element-ui';
-
-Vue.use(Input);
-Vue.use(Select);
-Vue.use(Option);
-Vue.use(Checkbox);
-
+import HeaderNav from './components/HeaderNav.vue';
+import FooterNav from './components/FooterNav.vue';
+import {Component} from "vue-property-decorator";
 Vue.config.productionTip = false;
+@Component({
+    components: {
+        'header-nav': HeaderNav,
+        'footer-nav': FooterNav
+    }
+})
+class Index extends Vue {
 
-// new Vue({
-//     el: "#app",
-// });
+}
+new Index().$mount('#app');

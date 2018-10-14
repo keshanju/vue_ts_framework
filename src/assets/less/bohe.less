@@ -1,0 +1,90 @@
+// 全局样式
+@BaseColor: #FFF;
+@BaseFontfamily: "Microsoft Yahei";
+// 公共类和标签样式
+ul {
+    list-style: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+.left_bh {
+    float: left;
+}
+.right_bh {
+    float: right;
+}
+.hide {
+   display: none; 
+}
+.show {
+    display: block;
+}
+body {
+    color: @BaseColor;
+    font-family: @BaseFontfamily;
+    background: #000;
+    .header_nav {
+        width: 1200px;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo_bh {
+            img {
+                border: 0;
+            }
+        }
+
+        .header_nav_list {
+            ul {
+                overflow: hidden;
+                li {
+                    display: block;
+                    float: left;
+                    text-align: center;
+                    margin-right: 38px;
+                    border-bottom: 1px solid #FFF;
+                    padding-bottom: 5px;
+                    a:hover {
+                        color: #de394a;
+                    }
+                }
+                li:hover {
+                    border-bottom: 1px solid #de394a
+                }
+            }
+        }
+
+        .login_frame_bh {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn_change_bh {
+                display: block;
+                color: #fff;
+                margin-right: 20px;
+            }
+            .login_choose_bh {
+                ul {
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        float: left;
+                        display: block;
+                        a {
+                            padding: 5px 9px;
+                            border-radius: 2px;
+                            margin-left: 8px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
