@@ -1,6 +1,6 @@
-import {IHttp} from '@/ts/interface/IHttp';
+import { IHttp } from '@/ts/interface/IHttp';
 import axios from 'axios';
-import {DataModel, IdataModel} from "@/ts/models/IdataModel";
+import { DataModel, IdataModel } from "@/ts/models/IdataModel";
 
 export default class HttpClient implements IHttp {
     // 成功请求
@@ -52,7 +52,7 @@ export default class HttpClient implements IHttp {
     public async get<T>(url: string, params: any) {
         url = this.BASE_URL + url;
         params['lang'] = 'zh_CN';
-        params = {params};
+        params = { params };
         try {
             let backData = await axios.get(url, params);
             let backData1 = backData.data as IdataModel<T>;
