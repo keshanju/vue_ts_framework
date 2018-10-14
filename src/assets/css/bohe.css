@@ -27,8 +27,14 @@ body .header_nav {
   width: 1200px;
   height: 70px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 body .header_nav .logo_bh img {
@@ -52,8 +58,14 @@ body .header_nav .header_nav_list ul li:hover {
   border-bottom: 1px solid #de394a;
 }
 body .header_nav .login_frame_bh {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 body .header_nav .login_frame_bh .btn_change_bh {
